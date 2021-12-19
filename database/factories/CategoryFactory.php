@@ -17,7 +17,14 @@ class CategoryFactory extends Factory
     public function definition()
     {
       return [
-          'name' => $this->faker->jobTitle(),
-      ];
+        'name' => $this->faker->unique()->randomElement([
+          'Eğlence',
+          'Bilişim',
+          'Gezi',
+          'Teknoloji',
+          'Sağlık',
+          'Spor',
+          'Günlük Yaşam'
+      ])];
     }
 }
