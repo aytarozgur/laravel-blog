@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\Category;
+use App\Models\Article;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()->count(50)->create();
+      Category::factory()->count(7)->create();
+      Article::factory()->count(4)->create();
     }
 }
